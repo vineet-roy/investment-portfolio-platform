@@ -1,0 +1,6 @@
+@baseUrl = http://localhost:3007
+
+### list All data sources
+
+GET {{baseUrl}}/api/v1/plugin/list-all?page=1&limit=5 HTTP/1.1 HTTP/1.1
+content-type: application/json
