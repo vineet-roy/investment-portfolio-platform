@@ -186,6 +186,7 @@ export const swaggerDocument = {
                 name: { type: 'string', example: 'Bitcoin' },
                 balance: { type: 'string', example: '1.5' },
                 chain: { type: 'string', example: 'Ethereum' },
+                usdValue: { type: 'integret', example: 10.5 },
               },
             },
           },
@@ -402,6 +403,62 @@ export const swaggerDocument = {
         },
       },
     },
+    "/v1/portfolio/holdings": {
+      "get": {
+        "summary": "Get wallet holdings",
+        "description": "Retrieve wallet holdings from the database for the authenticated user.",
+        "tags": ["Portfolio"],
+        "security": [{ "bearerAuth": [] }],
+        "responses": {
+          "200": {
+            "description": "Returns the portfolio holdings.",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/Portfolio" }
+              }
+            }
+          },
+          "404": { "$ref": "#/components/responses/404" },
+          "401": { "$ref": "#/components/responses/401" }
+        }
+      },
+      "post": {
+        "summary": "Update wallet holdings",
+        "description": "Fetch holdings from the blockchain, update or create the portfolio in the database for the authenticated user.",
+        "tags": ["Portfolio"],
+        "security": [{ "bearerAuth": [] }],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "walletAddress": {
+                    "type": "string",
+                    "description": "The wallet address for which to update or create the portfolio."
+                  }
+                },
+                "required": ["walletAddress"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Returns the updated or newly created portfolio.",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/Portfolio" }
+              }
+            }
+          },
+          "400": { "$ref": "#/components/responses/400" },
+          "401": { "description": "Unauthorized. JWT is required for authentication." },
+          "500": { "$ref": "#/components/responses/500" }
+        }
+      }
+    }
   }
   
 };
