@@ -1,0 +1,53 @@
+{
+  "name": "investment-plateform",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "proxy": "http://127.0.0.1:8000",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.15.13",
+    "@mui/styled-engine": "^5.15.11",
+    "@mui/x-data-grid": "^7.0.0",
+    "@nivo/core": "^0.87.0",
+    "@nivo/pie": "^0.87.0",
+    "@tanstack/react-query": "^5.51.11",
+    "apexcharts": "^3.47.0",
+    "autoprefixer": "^10.4.19",
+    "axios": "^1.7.2",
+    "flowbite": "^2.3.0",
+    "flowbite-react": "^0.9.0",
+    "i18next": "^23.11.5",
+    "i18next-browser-languagedetector": "^8.0.0",
+    "i18next-http-backend": "^2.5.2",
+    "jwt-decode": "^4.0.0",
+    "postcss": "^8.4.38",
+    "react": "^18.2.0",
+    "react-apexcharts": "^1.4.1",
+    "react-dom": "^18.2.0",
+    "react-i18next": "^14.1.2",
+    "react-pro-sidebar": "^1.1.0",
+    "react-router-dom": "^6.22.3",
+    "react-toastify": "^10.0.6",
+    "recharts": "^2.12.3",
+    "sass": "^1.71.1",
+    "web3": "^4.16.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.64",
+    "@types/react-dom": "^18.2.21",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "tailwindcss": "^3.4.4",
+    "vite": "^5.1.6"
+  }
+}

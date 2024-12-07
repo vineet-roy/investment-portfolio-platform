@@ -1,0 +1,136 @@
+.auth {
+  background-image: url("../../assets/background.jpg");
+  background-size: cover;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  min-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .blockContent {
+    background-color: rgb(218, 208, 224);
+    border-radius: 5px;
+    color: black;
+    width: 30%;
+    height: 60%;
+    position: relative;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(37, 36, 36, 0.2);
+
+    &.signup {
+      height: 80%; // Adjust height for Signup
+    }
+
+    @media screen and (max-width: 800px) {
+      width: 60%;
+      height: 40%;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      margin-bottom: 20px;
+    }
+
+    form {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+      @media screen and (max-width: 800px) {
+        margin-top: 10px;
+      }
+
+      label {
+        align-self: flex-start;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        font-size: clamp(0.8rem, 3vw, 1rem);
+        color: #333;
+
+        @media screen and (max-width: 800px) {
+          font-size: 0.9rem;
+        }
+      }
+
+      input {
+        padding: 10px;
+        width: 100%;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1rem;
+        color: #333;
+
+        &:focus {
+          outline: none;
+          border-color: #007bff;
+        }
+
+        @media screen and (max-width: 800px) {
+          padding: 8px;
+        }
+      }
+
+      .submitButton {
+        button {
+          width: 100%;
+          padding: 10px;
+          margin-top: 15px;
+          background-color: #222;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          font-weight: bold;
+          font-size: 1rem;
+          cursor: pointer;
+          transition: background-color 0.3s;
+
+          &:hover {
+            background-color: #464343;
+          }
+
+          @media screen and (max-width: 800px) {
+            padding: 8px;
+          }
+        }
+      }
+    }
+
+    .bottomText {
+      position: absolute;
+      bottom: 15px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-size: 0.9rem;
+
+      @media screen and (max-width: 800px) {
+        font-size: 0.8rem;
+      }
+
+      a {
+        color: #007bff;
+        text-decoration: none;
+        font-weight: bold;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+/* In your global or signup.scss */
+.Toastify__toast--success {
+  background-color: #4CAF50; /* Green for success */
+}
+
+.Toastify__toast--error {
+  background-color: #F44336; /* Red for error */
+}

@@ -1,0 +1,120 @@
+.datagridtable {
+  margin: 30px;
+  width: 90%;
+  border-radius: 10px;
+  -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+  box-shadow: 2px 4px 10px 1px rgba(133, 82, 228, 0.47);
+  background-color: var(--second_background-color);
+}
+.walletTable {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.walletTable .datagridtable .data {
+  border: none;
+
+  .MuiDataGrid-columnHeaderTitleContainer {
+    font-size: 20px;
+  }
+
+  .MuiDataGrid-cell {
+    color: rgb(var(--color_gray));
+    font-size: 20px;
+    font-weight: bold;
+    --rowBorderColor: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .portfolio,
+  .price,
+  .balance {
+    text-align: center;
+  }
+  .amount,
+  .name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .icon {
+      margin-left: 5px;
+      width: 20px;
+      height: 20px;
+    }
+  }
+  .nameIcon {
+    width: 40px;
+    margin-right: 20px;
+  }
+}
+
+.transactionTable .datagridtable .data {
+  border: none;
+
+  .MuiDataGrid-columnHeaderTitleContainer {
+    font-size: 20px;
+  }
+
+  .MuiDataGrid-cell {
+    color: rgb(var(--color));
+    font-size: 15px;
+    text-align: center;
+    --rowBorderColor: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+  .isIncoming {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .incoming,
+    .outcoming {
+      width: 40px;
+      height: 40px;
+      margin-top: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+    }
+    .incoming {
+      background-color: rgb(67, 177, 67);
+    }
+    .outcoming {
+      background-color: rgb(225, 73, 73);
+    }
+  }
+  .token {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .amount,
+  .token {
+    font-weight: bold;
+  }
+  .status {
+    padding: 5px;
+    border-radius: 5px;
+
+    &.Completed {
+      color: rgb(67, 177, 67);
+      background-color: rgb(163, 243, 163);
+    }
+    &.Pending {
+      color: rgb(143, 134, 5);
+      background-color: rgb(238, 228, 96);
+    }
+    &.Canceled {
+      color: rgb(225, 73, 73);
+      background-color: rgb(233, 161, 161);
+    }
+  }
+}
