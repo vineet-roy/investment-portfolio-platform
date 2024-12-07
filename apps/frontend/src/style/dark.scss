@@ -1,0 +1,112 @@
+.root.dark {
+  --color: 184, 179, 179;
+  --color_gray: 140, 139, 139;
+  --background-color: #222;
+  --second_background-color: #323131;
+}
+
+.app.dark {
+  button {
+    &:hover {
+      background-color: rgb(89, 53, 117);
+    }
+  }
+  .sidebar {
+    border: none;
+
+    hr {
+      border: none;
+    }
+    li {
+      &:hover {
+        background-color: var(--second_background-color);
+      }
+    }
+    button {
+      &:hover {
+        background: none;
+      }
+    }
+  }
+
+  .navbar {
+    border: none;
+  }
+
+  .list {
+    .listContainer {
+      .datatable {
+        .css-1essi2g-MuiDataGrid-columnHeaderRow {
+          background-color: #2d2d2d;
+        }
+
+        .data {
+          --DataGrid-rowBorderColor: #222121;
+
+          .MuiDataGrid-withBorderColor {
+            border-color: #222121;
+          }
+          .css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root {
+            color: rgba(127, 66, 241, 0.47);
+          }
+        }
+        .viewButton {
+          color: rgba(151, 109, 230, 0.47);
+
+          &:hover {
+            color: rgb(87, 87, 214);
+          }
+        }
+
+        .deleteButton {
+          color: rgb(172, 9, 9);
+
+          &:hover {
+            color: rgb(206, 103, 103);
+          }
+        }
+      }
+    }
+  }
+
+  .homeContainer {
+    .tableCell {
+      border-color: #1b1a1a;
+    }
+
+    text {
+      fill: rgb(223, 220, 220);
+    }
+    span {
+      color: rgb(227, 223, 223);
+    }
+  }
+
+  .walletContainer {
+    .datagridtable {
+      .css-1essi2g-MuiDataGrid-columnHeaderRow {
+        background-color: #2d2d2d;
+        color: rgb(197, 194, 194);
+      }
+      .css-qcqlck-MuiDataGrid-root {
+        --DataGrid-rowBorderColor: none;
+      }
+    }
+
+    .converter {
+      input {
+        &:disabled {
+          background-color: #2d2d2d;
+        }
+      }
+      .MuiSelect-select {
+        background-color: #323131;
+        color: rgb(184, 179, 179);
+      }
+    }
+  }
+  // .MuiList-root {
+  //   background-color: #2d2d2d;
+  //   color: rgb(184, 179, 179);
+  // }
+}

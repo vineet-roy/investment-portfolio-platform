@@ -6,6 +6,7 @@ export interface Holdings {
     name: string;
     balance: string;
     chain: string;
+    usdValue: number
   }
 
 export type PortfolioDocument = Portfolio & Document;
@@ -18,7 +19,7 @@ export class Portfolio {
   @Prop({ required: true })
   walletAddress: string;
 
-  @Prop([{ symbol: String, name: String, balance: String, chain: String }])
+  @Prop([{ symbol: String, name: String, balance: String, chain: String, usdValue: Number }])
   holdings: Holdings[];
 }
 

@@ -1,0 +1,79 @@
+.wallet {
+  display: flex;
+  background-color: var(--background-color);
+
+  .walletContainer {
+    flex: 9;
+
+    .content {
+      display: block;
+      .totalStatistic {
+        margin: 50px;
+        margin-left: 100px;
+        color: rgb(var(--color_gray));
+        h1 {
+          font-weight: bold;
+          color: rgb(var(--color));
+        }
+        .up {
+          font-size: 14px;
+          font-weight: bold;
+          color: rgb(56, 140, 28);
+        }
+
+        .down {
+          font-size: 14px;
+          font-weight: bold;
+          color: red;
+        }
+      }
+      .buttonGroup {
+        margin-left: 50px;
+
+        button {
+          font-weight: bold;
+          text-transform: none;
+          padding: 8px 20px;
+          margin: 0px;
+          font-size: 18px;
+          color: rgb(var(--color_gray));
+        }
+      }
+
+      .buttonGroup {
+        margin-left: 50px;
+
+        button {
+          font-weight: bold;
+          text-transform: none;
+          padding: 8px 20px;
+          margin: 0px;
+          font-size: 18px;
+          color: rgb(var(--color_gray));
+        }
+      }
+    }
+    .connectButton {
+      position: absolute;
+      top: 175px;
+      right: 100px;
+      background-color: rgb(var(--color));
+      color: rgb(var(--color_gray));
+      padding: 8px 20px;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    & .updateButton {
+      right: 300px;
+    }
+
+    .connectButton:hover {
+      background-color: rgb(var(--color_hover));
+    }
+  }
+}

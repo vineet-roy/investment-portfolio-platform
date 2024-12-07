@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-bg-primary: theme("colors.white");
+    --color-bg-secondary: theme("colors.white");
+    --color-bg-third: theme("colors.gray.200");
+    --color-text-primary: theme("colors.gray.900");
+    --color-text-gray: theme("colors.white");
+    --color-text-gray-second: theme("colors.gray.700");
+    --color-border-none: theme("colors.white");
+    --color-border: theme("colors.gray.300");
+  }
+}
+
+.theme-dark {
+  --color-bg-primary: theme("colors.gray.900");
+  --color-bg-secondary: theme("colors.gray.800");
+  --color-bg-third: theme("colors.gray.700");
+  --color-text-primary: theme("colors.gray.50");
+  --color-text-gray: theme("colors.gray.400");
+  --color-text-gray-second: theme("colors.gray.200");
+  --color-border-none: theme("colors.gray.800");
+  --color-border: theme("colors.gray.700");
+}
